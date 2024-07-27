@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+	  <Description>
+		  Documento.Net é uma biblioteca que facilita a validação de documentos de identificação brasileiros via calculo de DV. 
+		  Atualmente os documentos suportados são RG, CPF e CNPJ		  
+	  </Description>
+	  <PackageId>DocumentoNet.NuGet</PackageId>
+	  <Version>1.0.0</Version>
+	  <Authors>Michael Rozendo</Authors>
+	  <Company>MR Solutions</Company>
+	  <PackageTags>nuget;</PackageTags>
+	  <RepositoryUrl>https://github.com/mikerozendo/Documento.Net</RepositoryUrl>
+	  <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
 
 </Project>
