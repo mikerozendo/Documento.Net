@@ -12,7 +12,7 @@ Pacote Nuget: https://www.nuget.org/packages/DocumentoNet.NuGet/
 
 Após instalar o pacote via Gerenciador de pacotes Nuget no VisualStudio, basta fazer a importação do NameSpace Documento.Net
 
-<img src="assets/exemplo.jpg" alt="Imagem de exemplo" width="300" />
+<img src="assets/exemplo.jpg" alt="Imagem de exemplo" width="600" />
 
 Como na imagem, basta fazer a instanciação de um objeto DocumentNet e passar como parâmetro o número do documento como string.
 Não existe necessidade de fazer formatação do campo, do jeito que o documento for inputado, a biblioteca vai saber se virar.
