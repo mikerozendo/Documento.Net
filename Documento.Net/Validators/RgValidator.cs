@@ -1,35 +1,40 @@
-﻿namespace Documento.Net.Validators;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
-internal class RgValidator : IValidator
+namespace Documento.Net.Validators
 {
-    public bool IsValid(string document)
+    internal class RgValidator : IValidator
     {
-        char[] rgBase = document.ToCharArray();
-        int resultadoDv, somaDv = 0;
-        Dictionary<int, int> dictionary = new();
-
-        try
+        public bool IsValid(string document)
         {
-            for (int i = 0; i < rgBase.Count() - 1; i++)
+            char[] rgBase = document.ToCharArray();
+            int resultadoDv, somaDv = 0;
+            Dictionary<int, int> dictionary = new Dictionary<int, int>();
+
+            try
             {
-                dictionary.Add(i, (i + 2) * int.Parse(rgBase[i].ToString()));
+                for (int i = 0; i < rgBase.Count() - 1; i++)
+                {
+                    dictionary.Add(i, (i + 2) * int.Parse(rgBase[i].ToString()));
 
-                if (dictionary.TryGetValue(i, out int value))
-                    somaDv += value;
+                    if (dictionary.TryGetValue(i, out int value))
+                        somaDv += value;
+                }
+
+                resultadoDv = 11 - (somaDv % 11);
+
+                if ((rgBase.Last() == 'X' && resultadoDv == 10) ||
+                    (rgBase.Last() != 'X' && rgBase.Last() != '0' && rgBase.Last().ToString() == resultadoDv.ToString()) ||
+                    (rgBase.Last() == '0' && resultadoDv == 11))
+                    return true;
+                else
+                    return false;
             }
-
-            resultadoDv = 11 - (somaDv % 11);
-
-            if ((rgBase.Last() == 'X' && resultadoDv == 10) ||
-                (rgBase.Last() != 'X' && rgBase.Last() != '0' && rgBase.Last().ToString() == resultadoDv.ToString()) ||
-                (rgBase.Last() == '0' && resultadoDv == 11))
-                return true;
-            else
-                return false;
-        }
-        catch (Exception ex)
-        {
-            throw;
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
     }
 }

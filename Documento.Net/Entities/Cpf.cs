@@ -1,8 +1,9 @@
 ﻿using Documento.Net.Validators;
 
-namespace Documento.Net.Entities;
-
-internal class Cpf : Document
+namespace Documento.Net.Entities
 {
-    public Cpf(string number) : base(number, DocumentType.RG, new CpfValidator()) { }
+    internal class Cpf : Document
+    {
+        public Cpf(string number) : base(number, DocumentType.RG, new CpfValidator()) { }
+    }
 }

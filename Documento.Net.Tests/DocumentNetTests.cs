@@ -1,6 +1,6 @@
 namespace Documento.Net.Tests;
 
-public class RgTests
+public class DocumentNetTests
 {
     [Theory]
     [InlineData("000000000")]

@@ -1,8 +1,10 @@
 ﻿using Documento.Net.Validators;
 
-namespace Documento.Net.Entities;
-
-internal class Cnpj : Document
+namespace Documento.Net.Entities
 {
-    public Cnpj(string number) : base(number, DocumentType.CNPJ, new CnpjValidator()) { }
+    internal class Cnpj : Document
+    {
+        public Cnpj(string number) : base(number, DocumentType.CNPJ, new CnpjValidator()) { }
+    }
 }
+
