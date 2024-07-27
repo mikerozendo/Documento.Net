@@ -3,6 +3,10 @@ using System.Text.RegularExpressions;
 
 namespace Documento.Net;
 
+/// <summary>
+/// Realiza validação de calculo de DV (RG,CPF ou CNPJ)
+/// </summary>
+/// <param name="numberToValidate">Documento para validar</param>
 public class DocumentNet(string numberToValidate)
 {
     private string _numberToValidate = numberToValidate;
@@ -13,6 +17,10 @@ public class DocumentNet(string numberToValidate)
         {  DocumentType.CNPJ, BuilCnpj }
     };
 
+    /// <summary>
+    /// Valida documento
+    /// </summary>
+    /// <returns>true ou falso</returns>
     public bool IsValid()
     {
         try
