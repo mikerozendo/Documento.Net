@@ -2,7 +2,7 @@
 
 namespace Documento.Net.Entities;
 
-public class Cnpj : Document
+internal class Cnpj : Document
 {
     public Cnpj(string number) : base(number, DocumentType.CNPJ, new CnpjValidator()) { }
 }

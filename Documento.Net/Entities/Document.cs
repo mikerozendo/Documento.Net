@@ -2,7 +2,7 @@
 
 namespace Documento.Net.Entities;
 
-public abstract class Document
+internal abstract class Document
 {
     public string FormattedNumber { get; private set; }
     public DocumentType DocumentType { get; private set; }

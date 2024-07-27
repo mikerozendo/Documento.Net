@@ -1,6 +1,6 @@
 ﻿namespace Documento.Net.Entities;
 
-public enum DocumentType
+internal enum DocumentType
 {
     RG = 1,
     CPF = 2,

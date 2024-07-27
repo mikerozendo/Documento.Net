@@ -1,6 +1,6 @@
 ﻿namespace Documento.Net.Validators;
 
-public interface IValidator
+internal interface IValidator
 {
     bool IsValid(string document);
 }
