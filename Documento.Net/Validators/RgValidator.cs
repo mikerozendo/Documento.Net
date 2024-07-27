@@ -1,6 +1,6 @@
 ﻿namespace Documento.Net.Validators;
 
-public class CpfValidator : IValidator
+internal class RgValidator : IValidator
 {
     public bool IsValid(string document)
     {

@@ -1,12 +1,12 @@
 ﻿using Documento.Net.Entities;
+using System.Text.RegularExpressions;
 
 namespace Documento.Net;
 
 public class DocumentNet(string numberToValidate)
 {
     private string _numberToValidate = numberToValidate;
-
-    private Dictionary<DocumentType, Func<string, Document>> ValidDocuments = new()
+    private Dictionary<DocumentType, Func<string, Document>> DocumentBuildersDictionary = new()
     {
         {  DocumentType.RG, BuilRg } ,
         {  DocumentType.CPF, BuilCpf } ,
@@ -26,7 +26,11 @@ public class DocumentNet(string numberToValidate)
             if (documentType is DocumentType.Outros)
                 return false;
 
-            var validSearch = ValidDocuments.TryGetValue(documentType, out var document);
+            var areAllDigitsEqual = Regex.Match(_numberToValidate, @"^(\d)\1*$");
+            if (areAllDigitsEqual.Success)
+                return false;
+
+            var validSearch = DocumentBuildersDictionary.TryGetValue(documentType, out var document);
             var isDocumentValid = document?.Invoke(_numberToValidate)?.IsValid ?? false;
             return isDocumentValid;
         }
