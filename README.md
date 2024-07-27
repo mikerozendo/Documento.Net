@@ -1,21 +1,21 @@
 Sobre o projeto
 
-Documento.Net È um pacote criado com o objetivo de validar um documento via calculo de DV(dÌgito verificador)
-Atualmente os documentos suportados s„o: RG, CPF e CNPJ.
+Documento.Net √© um pacote criado com o objetivo de validar um documento via calculo de DV(d√≠gito verificador)
+Atualmente os documentos suportados s√£o: RG, CPF e CNPJ.
 
-O projeto foi desenvolvido em .NET Standard2.0 visando atender questıes de compatibilidade entre diferentes versıes do ecossistema .Net
+O projeto foi desenvolvido em .NET Standard2.0 visando atender quest√µes de compatibilidade entre diferentes vers√µes do ecossistema .Net
 
-Pacote Nuget: https://www.nuget.org/packages/DocumentoNet.NuGet/
+Pacote Nuget: https://www.nuget.org/packages/DocumentoNet
 
 
 ## Como usar
 
-ApÛs instalar o pacote via Gerenciador de pacotes Nuget no VisualStudio, basta fazer a importaÁ„o do NameSpace Documento.Net
+Ap√≥s instalar o pacote via Gerenciador de pacotes Nuget no VisualStudio, basta fazer a importa√ß√£o do NameSpace Documento.Net
 
 <img src="assets/exemplo.jpg" alt="Imagem de exemplo" width="100%" height="160px" />
 
-Como na imagem, basta fazer a instanciaÁ„o de um objeto DocumentNet e passar como par‚metro o n˙mero do documento como string.
-N„o existe necessidade de fazer formataÁ„o do campo, do jeito que o documento for inputado, a biblioteca vai saber se virar.
+Como na imagem, basta fazer a instancia√ß√£o de um objeto DocumentNet e passar como par√¢metro o n√∫mero do documento como string.
+N√£o existe necessidade de fazer formata√ß√£o do campo, do jeito que o documento for inputado, a biblioteca vai saber se virar.
 
 
 
